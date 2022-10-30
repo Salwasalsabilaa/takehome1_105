@@ -6,11 +6,64 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>hasil</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           
+             .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #990066;
+            color: white;
+            text-align: center;
+            
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>Toko Kue Celestia</h1>
+        <hr>
+        <h2>Nota Pembayaran</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>Nama Buku</td>
+                        <td>Jumlah Buku</td>
+                        <td>Harga Buku</td>
+                        <td>Total Harga</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td th:text="${Nama}"></td>
+                        <td th:text="${Barang}"></td><!-- comment -->
+                        <td th:text="${Harga}"></td>
+                        <td th:text="${Total}"></td>
+                    </tr>
+
+                    <tr>
+                    <td colspan="4" align="center"> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Diskon</td>
+                    <td colspan="3" th:text="${TotalDiskon}"></td>
+                </tr>
+
+                <tr>
+                    <td>Total</td><!-- comment -->
+                    <td colspan="3" th:text="${Diskon}"></td>
+                </tr>
+                </tbody>
+            </table>
+    </body>
+    <div class="footer">
+        <p>Azhar Salwa Salsabila (20200140105)</p>
+    </div>
     </body>
 </html>

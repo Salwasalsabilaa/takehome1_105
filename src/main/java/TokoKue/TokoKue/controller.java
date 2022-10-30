@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 public class controller {
     tablecontroller result = new tablecontroller();
-    @RequestMapping("/Input")
+    @RequestMapping("/inputdata")
     
     public String getHasll(HttpServletRequest data, Model model) {
         String getNama = data.getParameter("Nama_Kue");
