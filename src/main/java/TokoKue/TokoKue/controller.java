@@ -6,6 +6,7 @@
 package TokoKue.TokoKue;
 
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,11 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author Inspiron
  */
+@Controller
 public class controller {
     tablecontroller result = new tablecontroller();
-    @RequestMapping("/inputdata")
+    @RequestMapping("/input")
     
-    public String getHasll(HttpServletRequest data, Model model) {
+    public String getHasil(HttpServletRequest data, Model model) {
         String getNama = data.getParameter("Nama_Kue");
         int getJumlah = Integer.parseInt(data.getParameter("Jumlah_Kue"));
         int getHarga = Integer.parseInt(data.getParameter("Harga_Kue"));
